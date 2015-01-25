@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>myappDeck</title>
+  <meta name="description" content="">
+  <meta name="author" content="sentient88">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='class' data-state='' id='id1'>
+  <h2>Understanding Your Health Risk</h2>
+  <h2>via Body Mass Index</h2>
+
+<p><br/>
+An easy-to-use, interactive application that helps you understand your health risk based on your Body Mass Index    </p>
+
+<p><br/>
+Presented by <strong>sentient88</strong></p>
+
+</section>
+<section class='class' data-state='' id='id2'>
+  
+  <p>We all know the key elements to living a Healthy Life ....</p>
+
+<p><br/>
+<img src="pic1.jpg"></p>
+
+<p><br/>
+<strong>But how do we measure and monitor how well we are doing?</strong></p>
+
+</section>
+<section class='class' data-state='' id='id3'>
+  <h2>Web-based Body Mass Index Calculator</h2>
+  <p><br/>
+We have developed an easy-to-use online application that enables users to access at any time and calculate their Body Mass Index (BMI) by entering their weight and height information.</p>
+
+<p><br/>
+After getting their Body Mass Index computed, the users can easily refer to the <strong>Health Risk by BMI</strong> Chart that is included on the same webpage to understand which health risk category they would fall under.</p>
+
+</section>
+<section class='class' data-state='' id='id4'>
+  <h2>Algorithm for Body Mass Index:</h2>
+  <p><br/>
+Let &#39;<strong>x</strong>&#39; be the user&#39;s weight in kg,
+and &#39;<strong>y</strong>&#39; be the user&#39;s height in m.</p>
+
+<p><br/>
+Hence, the BMI is computed as follows:</p>
+
+<p><strong>my_bmi &lt;- x / y<sup>2</sup></strong></p>
+
+<p><br/>
+For example, a user who is 75 kg and 1.80 m tall:</p>
+
+<pre><code class="r">x &lt;- 75
+y &lt;- 1.80
+my_bmi &lt;- x / y^2
+my_bmi
+</code></pre>
+
+<pre><code>## [1] 23.14815
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id5'>
+  
+  <p>A sample screenshot of the application:</p>
+
+<p><img src="pic2.png" height='560'></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'beige', 
+    transition: Reveal.getQueryHash().transition || 'none', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- End Google Prettify --> 
+
+</html>
